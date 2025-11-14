@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Urbanist", "sans-serif";
+    --breakpoint-3xl: 1920px;
+    --color-primary: #9328E7
+}
+
+@layer base {
+    html {
+        font-family: var(--font-display);
+    }
+    body {
+        background-color: #fcfbfc;
+        overflow-x: hidden;
+    }
+
+}
+
+/* We added overflow-x: hidden on the <body> to prevent unwanted horizontal scrolling.
+/* 
+
+If any element accidentally grows wider than the screen
+
+The page will NOT show an ugly horizontal scroll bar
+
+The content will visually stay within the viewport
+
+*/
+
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+@layer utilites {
+    /* Animate text with shine effect */
+    @keyframes text-shine {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+    .animate-text-shine {
+        animation: text-shine 3s ease-in-out infinite alternate;
+    }
+}
