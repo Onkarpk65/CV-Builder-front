@@ -25,6 +25,7 @@ const Login = ({ setCurrentPage }) => {
     try {
     } catch (err) {}
   };
+
   return (
     <div className="w-full flex flex-col">
       <h3 className="text-lg font-semibold text-black">Welcome Back</h3>

@@ -33,7 +33,7 @@ const Hero = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row items-center py-20 px-8">
         <div className="w-full md:w-1/2 pr-4 mb-8 md:mb-0">
           <h1 className="text-5xl font-bold leading-tight mb-6">
             Build Your{" "}
